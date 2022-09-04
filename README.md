@@ -1,13 +1,5 @@
-# Discord-Web-Client
+# DiscordBotClient-Version2
 
-# Features
-### Bot Login
-### Render files, picture, audio, video
-### Delete message logger
-### Account switcher, channel switcher (just click "Start Client" again)
-
-# Upcoming features
-### Render embeds
-### Slash command
-### Interactions
-### Emoji
+# its like discord but it require bot token to login
+# it give all acess to the bot even u can change the name.!
+# just click on the link below to go on the bot client site to download the client!
