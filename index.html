@@ -1,0 +1,158 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RgBotClient-V2</title>
+	<link rel='icon' href='logo.png'>
+    <!-- custom css and js-->
+    <script src="js/smoothscroll.js"></script>
+    <link rel="stylesheet" href="css/style.css">
+    <!-- box icons -->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+
+<body>
+    <!-- deader design -->
+    <header class="header">
+        <a href="#" class="logo">RgBotClient-V2</a>
+        <i class='bx bx-menu' id="menu-icon"></i>
+
+        <nav class="navbar">
+            <a href="#home" class="active">Home 🏠</a>
+            <a href="#V2">V2 😈</a>
+            <a href="#contact">Contact 👀</a>
+        </nav>
+    </header>
+
+    <!-- home section design  -->
+	<center>
+    <section class="home" id="home">
+        <div class="home-content">
+            <h3>Welcome to RgBotClient official site 👋!</h3>
+			<p>&nbsp; &nbsp; </p>
+            <h1>What is BotClient ?</h1>
+			<p>&nbsp; &nbsp; </p>
+            <h3>Its a Windows app that can give u the full access to the discord bot, with just a token, u can do  <span class="multiple-text"></span> from bot side.</h3>
+            <p>&nbsp; &nbsp;</p>
+            </div>
+        </div>
+        </div>
+    </section>
+	</center>
+
+    <!-- rgbotclient-v2 section  -->
+	<center>
+    <section class="V2" id="V2">
+        <div class="about-img">
+			 <img src='logo.png' width="50%" height="50%"
+        </div>
+        <div class="about-content">
+		<h2><center class="heading">RG <span>BotClient-V2</span></center></h2>
+            <h3>Use this to Gain the full access of the bot!</h3>
+            <p>&nbsp; &nbsp; ITS TOTALLY SAFE AND 100% SECURE AND AD FREE TOO.</p>
+            <a href="releases/rgbotclient-v2.exe" class="btn">DOWNLOAD</a>
+        </div>
+    </section>
+	</center
+    <!-- Service secvtion  -->
+    <section class="services" id="services">
+        <h2 class="heading">Our <span>Services</span></h2>
+        <div class="services-container">
+            <div class="services-box">
+                <i class='bx bxs-paint'></i>
+                <h3>Graphic Design?</h3>
+                <p>No bulky designs, our apps have minimal and clean ui.</p>
+            </div>
+            <div class="services-box">
+                <i class='bx bx-code-alt'></i>
+                <h3>Web Development?</h3>
+                <p>100% uptime, if you got any issue then contact us immediately</p>
+            </div>
+            <div class="services-box">
+                <i class='bx bxs-data'></i>
+                <h3>Security?</h3>
+                <p>We are 100% Safe and Secure, we dont store any of your precious data.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact form -->
+    <section class="contact" id="contact">
+        <h2 class="heading">Contact <span>Me!</span></h2>
+
+        <form action="">
+            <div class="input-box">
+                <input id="name" type="text" placeholder="Full Name">
+                <input id="email" type="email" placeholder="Email Address">
+            </div>
+            <div class="input-box">
+                <input id="number" type="number" placeholder="Contact Number">
+                <input id="subject" type="text" placeholder="Email Subject">
+            </div>
+            <textarea name="message" id="message" cols="30" rows="10" placeholder="Your Message"></textarea>
+            <button type="button" class="btn" onclick="sendEmail(); reset(); return false">Send Message</button>
+        </form>
+    </section>
+
+    <!-- footer design  -->
+
+    <footer class="footer">
+        <div class="footer-text">
+            <p>Copyright &copy; 2024 by Rishab || All Rights Reserved.</p>
+        </div>
+
+        <div class="footer-iconTop">
+            <a href="#home"><i class='bx bx-up-arrow-alt'></i></a>
+        </div>
+    </footer>
+
+    <!-- scroll reversal  -->
+    <script src="https://unpkg.com/scrollreveal"></script>
+
+    <!-- typed js -->
+    <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
+
+    <!-- script file -->
+
+    <script src="js/script.js"></script>
+    <script src="js/smoothscroll.js"></script>
+
+    <!-- send email -->
+    <script src="https://smtpjs.com/v3/smtp.js">
+    </script>
+    <script>
+        function sendEmail() {
+            let name = document.getElementById("name").value;
+            let email = document.getElementById("email").value;
+            let number = document.getElementById("number").value;
+            let subject = document.getElementById("subject").value;
+            let message = document.getElementById("message").value;
+            
+            let body = "Name: " + name + "<br/> Email: " + email + "<br/> Contact Number: " + number + "<br/> Subject: " + subject + "</br/> Message: " + message;
+
+            // console.log(body);
+
+            Email.send({
+                SecureToken : "2f2c7417-b17b-4a14-9e71-3f574f179fee",
+                //without secure token use these 3 lines
+                // Host: "smtp.elasticemail.com",
+                // Username: "akumaralp@gmail.com",
+                // Password: "7C0066AE64096D6FC4C642AC14B3C828FBC3",
+                To: 'itzrishabboss@gmail.com',
+                From: "akumaralp@gmail.com",
+                Subject: "PortFolio message",
+                Body: body
+            }).then(
+                message => alert("Your message is sent successfully")
+            );
+        }
+    </script>
+
+<script defer src="https://static.cloudflareinsights.com/beacon.min.js/v84a3a4012de94ce1a686ba8c167c359c1696973893317" integrity="sha512-euoFGowhlaLqXsPWQ48qSkBSCFs3DPRyiwVu3FjR96cMPx+Fr+gpWRhIafcHwqwCqWS42RZhIudOvEI+Ckf6MA==" data-cf-beacon='{"rayId":"853bb878fc171c97","r":1,"version":"2024.2.0","token":"2adf518d5e3b41c6b7351f78b019ad42"}' crossorigin="anonymous"></script>
+</body>
+
+</html>
